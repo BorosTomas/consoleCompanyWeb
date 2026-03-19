@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>console-company-web</title>
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        background: radial-gradient(circle at top, #111a28, #05070b 55%);
+        color: #8cff9a;
+        font-family: "Consolas", "Courier New", monospace;
+      }
+
+      .terminal {
+        width: min(900px, 92vw);
+        min-height: min(560px, 86vh);
+        border: 1px solid #2e3b4f;
+        border-radius: 10px;
+        background: #0a0f16;
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+        overflow: hidden;
+      }
+
+      .terminal__bar {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 12px 14px;
+        background: #131b29;
+        border-bottom: 1px solid #2e3b4f;
+      }
+
+      .dot {
+        width: 11px;
+        height: 11px;
+        border-radius: 50%;
+      }
+
+      .dot--close {
+        background: #ff5f56;
+      }
+
+      .dot--minimize {
+        background: #ffbd2e;
+      }
+
+      .dot--zoom {
+        background: #27c93f;
+      }
+
+      .terminal__title {
+        margin-left: 10px;
+        color: #9eb2c7;
+        font-size: 0.9rem;
+      }
+
+      .terminal__body {
+        padding: 18px 20px;
+        line-height: 1.55;
+        font-size: 0.98rem;
+      }
+
+      .line {
+        white-space: pre-wrap;
+      }
+
+      .prompt {
+        color: #6be9ff;
+      }
+
+      .muted {
+        color: #7f96ad;
+      }
+
+      .accent {
+        color: #ffd166;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="terminal" role="region" aria-label="Technical terminal webpage">
+      <header class="terminal__bar">
+        <span class="dot dot--close" aria-hidden="true"></span>
+        <span class="dot dot--minimize" aria-hidden="true"></span>
+        <span class="dot dot--zoom" aria-hidden="true"></span>
+        <span class="terminal__title">console-company-web — /usr/share/info</span>
+      </header>
+      <section class="terminal__body">
+        <p class="line"><span class="prompt">visitor@console-company:~$</span> whoami</p>
+        <p class="line">Technical Web Experience</p>
+
+        <p class="line"><span class="prompt">visitor@console-company:~$</span> ls services</p>
+        <p class="line">- frontend-engineering</p>
+        <p class="line">- backend-systems</p>
+        <p class="line">- cloud-automation</p>
+        <p class="line">- security-audits</p>
+
+        <p class="line"><span class="prompt">visitor@console-company:~$</span> cat status.log</p>
+        <p class="line muted">[OK] Uptime: 99.99%</p>
+        <p class="line muted">[OK] Deploy pipeline: green</p>
+        <p class="line muted">[OK] Monitoring: active</p>
+
+        <p class="line"><span class="prompt">visitor@console-company:~$</span> echo "Let's build."</p>
+        <p class="line accent">"Let's build."</p>
+      </section>
+    </main>
+  </body>
+</html>
